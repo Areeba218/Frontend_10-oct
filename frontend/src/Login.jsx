@@ -68,9 +68,14 @@ function Login() {
               <CardDescription>
                 Enter your email below to login to your account
               </CardDescription>
-              {/* <CardAction>
-              <Button variant="link">Sign Up</Button>
-            </CardAction> */}
+              <CardAction>
+                <Link
+                  to="/signup"
+                  className="text-sm underline hover:text-teal-600"
+                >
+                  Sign Up
+                </Link>
+              </CardAction>
             </CardHeader>
             <CardContent>
 
@@ -119,18 +124,18 @@ function Login() {
           <DialogHeader> <DialogTitle> Signup </DialogTitle>
             <DialogDescription> {message} </DialogDescription>
           </DialogHeader>
-        <Button
-  onClick={() => {
-    setShowPopup(false);
+          <Button
+            onClick={() => {
+              setShowPopup(false);
 
-    if (message === "Login Successfully! ") {
-      navigate("/");
-    }
-  }}
-  className="w-full"
->
-  OK
-</Button>
+              if (message === "Login Successfully! ") {
+                navigate("/");
+              }
+            }}
+            className="w-full"
+          >
+            OK
+          </Button>
         </DialogContent>
       </Dialog>
     </>
